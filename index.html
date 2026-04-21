@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لشاهي... من قلبي ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            font-family: 'Cairo', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        
+        .heart-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://source.unsplash.com/random/800x600/?hearts') center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: #e91e63;
+            text-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 1.6rem;
+            color: #6d1b7b;
+            margin-top: 10px;
+        }
+        
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: '❤️';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+        
+        .message {
+            font-size: 1.4rem;
+            line-height: 2;
+            text-align: center;
+            color: #4a148c;
+        }
+        
+        .memories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .memory-card {
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .memory-card:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.4);
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #c2185b;
+            transform: scale(1.1);
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            animation: float 8s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+        
+        .final-message {
+            font-size: 2rem;
+            color: #e91e63;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="container">
+        <header>
+            <div class="heart-bg"></div>
+            <h1>يا شاهي ❤️</h1>
+            <p class="subtitle">بحبك أوي... لدرجة إني مش متخيل إزاي كنت عايش من غيرك</p>
+        </header>
+        
+        <section>
+            <div class="message">
+                <p>من أول ما شفتك، قلبي قرر إنه مش هيرجع زي الأول أبداً.</p>
+                <p>أنتِ مش بس بنت حلوة... أنتِ اللي بتخلي الدنيا كلها تبان أجمل.</p>
+                <p class="final-message">بحبك أوي يا شاهي، لدرجة إني مش متخيل حياتي من غيرك</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2 style="text-align:center; color:#e91e63;">ليه بحبك أوي كده؟</h2>
+            <ul style="font-size:1.3rem; line-height:2.2; color:#4a148c;">
+                <li>ضحكتك دي بتفككني كل يوم</li>
+                <li>طريقة كلامك بتخليني أحس إني في عالم تاني خالص</li>
+                <li>حتى لو زعلان، مجرد ما أشوفك كل حاجة بترجع تتحل</li>
+                <li>أنتِ أجمل حلم وأحلى واقع في حياتي</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2 style="text-align:center; color:#e91e63;">ذكرياتنا اللي مش هتنساها أبداً</h2>
+            <div class="memories">
+                <div class="memory-card">
+                    <h3>يوم أول مرة اتكلمنا</h3>
+                    <p>كنت خايف أوي... بس لما سمعت صوتك، حسيت إن الدنيا بقت أحلى</p>
+                </div>
+                <div class="memory-card">
+                    <h3>ضحكتك وأنا بحكيلك نكتة سخيفة</h3>
+                    <p>دي اللحظة اللي قررت فيها إني عايز أضحكك كل يوم</p>
+                </div>
+                <div class="memory-card">
+                    <h3>كل نظرة منك</h3>
+                    <p>بتخليني أحس إني أهم حد في الدنيا</p>
+                </div>
+            </div>
+        </section>
+        
+        <section style="text-align:center;">
+            <p style="font-size:1.5rem; color:#6d1b7b;">
+                شاهي... أنتِ كل حاجة حلوة في حياتي.<br>
+                مش عارف أعيش من غير ما أفكر فيكي كل ثانية.
+            </p>
+            <button onclick="confessLove()">اضغط هنا لو عايزة تعرفي قد إيه بحبك أوي</button>
+        </section>
+    </div>
+
+    <script>
+        // قلوب طايرة
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = ['❤️', '💖', '💗', '💘', '💝'][Math.floor(Math.random()*5)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 6 + 7) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 25) + 'px';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 15000);
+        }
+        
+        setInterval(createHeart, 300);
+        
+        // رسالة الاعتراف الكبيرة
+        function confessLove() {
+            const messages = [
+                "بحبك أوي يا شاهي... أنتِ سبب سعادتي كل يوم ❤️",
+                "لو الدنيا كلها اختفت، هفضل أحبك أنتِ بس",
+                "أنتِ حبيبتي، روحي، وكل حلمي",
+                "مش متخيل إزاي قلبي بقى ملكك كده",
+                "هفضل أحبك لحد آخر نفس... وأكتر كمان 💕"
+            ];
+            
+            let i = 0;
+            const interval = setInterval(() => {
+                alert(messages[i]);
+                i++;
+                if (i >= messages.length) clearInterval(interval);
+            }, 800);
+            
+            // تأثير إضافي
+            document.body.style.transition = 'all 1s';
+            document.body.style.background = 'linear-gradient(135deg, #ff4081, #f50057)';
+        }
+        
+        // رسالة ترحيب أول ما يفتح الموقع
+        window.onload = () => {
+            setTimeout(() => {
+                alert("يا شاهي... الموقع ده عملته مخصوص عشان أقولك بحبك أوي ❤️\nافتحه كويس واستمتعي");
+            }, 800);
+        };
+    </script>
+</body>
+</html>
