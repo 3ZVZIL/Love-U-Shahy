@@ -3,196 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حكايتي مع شاهي ❤️</title>
+    <title>The End | النهاية</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Amiri:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap');
         
         body {
             margin: 0; padding: 0;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #f8bbd0 100%);
+            background-color: #0a0a0a; /* أسود عميق */
+            color: #888;
             font-family: 'Cairo', sans-serif;
-            color: #4a148c;
-            line-height: 1.9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        
-        .heart-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
-        
-        .container { max-width: 1050px; margin: 0 auto; padding: 20px; position: relative; z-index: 2; }
-        
-        .love-counter {
-            background: rgba(255,255,255,0.93);
-            padding: 30px;
-            border-radius: 50px;
+
+        .container {
             text-align: center;
-            margin: 25px auto;
-            box-shadow: 0 20px 50px rgba(233,30,99,0.35);
-            border: 5px solid #e91e63;
+            max-width: 600px;
+            padding: 40px;
+            border-left: 1px solid #333;
         }
-        .counter { font-size: 2.35rem; font-weight: bold; color: #e91e63; letter-spacing: 2px; }
-        
-        header { text-align: center; padding: 80px 20px 50px; }
-        h1 { font-size: 4rem; background: linear-gradient(to right, #e91e63, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        section { 
-            background: rgba(255,255,255,0.96); 
-            margin: 45px 0; 
-            padding: 55px; 
-            border-radius: 32px; 
-            box-shadow: 0 25px 55px rgba(233,30,99,0.28); 
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
-        
-        .section-title { 
-            color: #e91e63; 
-            text-align: center; 
-            font-size: 2.3rem; 
-            margin-bottom: 35px; 
+
+        .status {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-family: monospace;
         }
-        
-        .memory { 
-            background: #fff0f5; 
-            padding: 30px; 
-            border-radius: 20px; 
-            margin: 30px 0; 
-            font-size: 1.35rem; 
+
+        .message {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 50px;
         }
-        
-        .final { 
-            font-size: 2.25rem; 
-            text-align: center; 
-            animation: heartbeat 1.8s infinite; 
-            color: #9c27b0; 
+
+        .line {
+            width: 50px;
+            height: 1px;
+            background: #e91e63; /* لمسة لون واحدة تدل على ما فات */
+            margin: 20px auto;
+            opacity: 0.5;
         }
-        
-        @keyframes heartbeat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
-        
-        button {
-            background: linear-gradient(#e91e63, #c2185b);
-            color: white;
-            border: none;
-            padding: 18px 60px;
-            font-size: 1.5rem;
-            border-radius: 50px;
+
+        .btn-exit {
+            background: transparent;
+            border: 1px solid #333;
+            color: #888;
+            padding: 12px 30px;
+            text-decoration: none;
+            transition: all 0.4s ease;
             cursor: pointer;
-            margin: 25px auto;
-            display: block;
-            box-shadow: 0 15px 35px rgba(233,30,99,0.4);
         }
-        button:hover { transform: scale(1.12); }
+
+        .btn-exit:hover {
+            border-color: #fff;
+            color: #fff;
+            background: #111;
+        }
+
+        /* أنيميشن بسيط للاختفاء */
+        .fade-in {
+            animation: fadeIn 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <div class="heart-rain" id="heartRain"></div>
 
-    <div class="container">
-        <!-- العداد -->
-        <div class="love-counter">
-            <div style="font-size:1.55rem; color:#c2185b; margin-bottom:10px;">من يوم ما اعترفتلي وقلبي صار ملكك ❤️</div>
-            <div class="counter" id="counter">... يوم ، ... ساعة ، ... دقيقة ، ... ثانية</div>
-            <small>20 أبريل 2025 - الساعة 4:00 مساءً</small>
+    <div class="container fade-in">
+        <div class="status">LOG_DATE: 20/04/2025 - 06/05/2026</div>
+        <h1>تم الانتهاء</h1>
+        
+        <div class="line"></div>
+
+        <div class="message">
+            قيل ما قيل، واكتملت الحكاية بآخر نقطة.<br>
+            الذكريات لم تعد صالحة للاستخدام،<br>
+            والوعود التي لا تُصان.. تُنسى.
         </div>
 
-        <header>
-            <h1>حكايتي مع شاهي</h1>
-            <p style="font-size:1.85rem; font-family:'Amiri',serif;">من أيام الطفولة إلى الأبد</p>
-        </header>
+        <div class="message" style="font-size: 1rem; color: #444;">
+            (تم إغلاق الأرشيف نهائياً)
+        </div>
 
-        <section>
-            <h2 class="section-title">البداية في الطفولة</h2>
-            <p>كنت عندي حوالي 10 أو 11 سنة وأنتِ كنتِ 7 سنين. كنا أطفال بنلعب ونضحك. فاكر كويس أوي إزاي كنا نطلع ناكل توت من الشجرة عندكم ووشك يتبهدل من العصير. وفاكر كمان المرة اللي كان شعري فيه قشره وأنتِ كنتِ تنضفيه لي بكل حنان.</p>
-        </section>
+        <div class="line"></div>
 
-        <section>
-            <h2 class="section-title">الفراق والرجوع</h2>
-            <div class="memory">
-                حصلت مشكلة عائلية وقعدنا 7 سنين منعرفش حاجة عن بعض.<br><br>
-                في شهر 8/2023، بعد ما عملت عملية، جيتِ تزورني في البيت. طلبت منك تشحني كارت... وفي ذلك اليوم رجعنا نتكلم تاني.
-            </div>
-            <p>من أول ما بدأنا نتكلم، حسيت بحاجة غريبة جداً. كنت مرتاح أوي، قلبي هادي وببتسم في كل مرة أكلمك. الإحساس ده مكنتش قادر أوصفه بكلمات.</p>
-        </section>
-
-        <section>
-            <h2 class="section-title">الاعترافات... أجمل أيام حياتي</h2>
-            <div class="memory">
-                <strong>يوم 6 أبريل 2025</strong><br>
-                قرب الفجر وإحنا بنتكلم على الواتس، اعترفتلك بحبي.
-            </div>
-            <div class="memory">
-                <strong>يوم 20 أبريل 2025</strong><br>
-                في بيتنا... اعترفتي ليا. كنتِ متوترة أوي، وشك أحمر، بتتوه وبتفكري. فضلت أقولك "قولي بقى كنتِ هتقوليلي إيه أمس"، ولما قلتيها مرة واحدة... كنت أسعد واحد في الدنيا. فضلت تقوليها كذا مرة وأنتِ ماسكة إيدي وقولتيلي "أنت مش هتسبني ولا تبعد عني".
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">ليه بحبك أوي كده؟</h2>
-            <div class="memory">
-                بحبك كلك ع بعضها بكل ما فيكِ.<br>
-                بحب أشوفك سعيدة، وبداق أوي أوي لما أشوفك زعلانة أو مدايقة.<br>
-                أنتِ بقتِ نسخة مصغرة مني في كل حاجة... أنا كنت زيك أب وبعلمك، وبقيتِ دلوقتي جزء لا يتجزأ مني.<br>
-                كل يوم معاكِ ذكرى حلوة جديدة.
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">رسالة من قلبي</h2>
-            <div style="font-size:1.5rem; line-height:2.2; text-align:center; font-family:'Amiri',serif;">
-                يا شاهي حبيبتي...<br><br>
-                مهما أحاول أتكلم وأوصف حبي ليكِ، مش هقدر أبدًا. أنتِ اللي رجعتِ تضيئي حياتي بعد سنين الفراق. 
-                كل لحظة معاكِ بقت أجمل ذكرى في حياتي. أوعدك إني هفضل جنبك دايمًا، مش هسبك ولا هبعد عنك أبدًا... زي ما قلتيلي يوم 20/4.<br><br>
-                أنتِ كل حاجة حلوة في حياتي، وهفضل أحبك أكتر كل يوم.
-            </div>
-            <p class="final">بحبك أوي يا شاهي... للأبد ❤️</p>
-        </section>
-
-        <button onclick="window.open('shahi-gallery.html', '_blank')">شوف ذكرياتنا بالصور والفيديوهات ❤️</button>
+        <a href="about:blank" class="btn-exit">خروج</a>
     </div>
 
     <script>
-        // العداد الدقيق
-        const startDate = new Date(2025, 3, 20, 16, 0, 0);
-        
-        function updateCounter() {
-            const diff = Date.now() - startDate;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('counter').innerHTML = 
-                `${days} يوم ، ${hours} ساعة ، ${minutes} دقيقة ، ${seconds} ثانية`;
-        }
-        
-        setInterval(updateCounter, 1000);
-        updateCounter();
-
-        // قلب مطر
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.style.position = 'fixed';
-            heart.style.zIndex = '1';
-            heart.style.fontSize = (Math.random() * 28 + 24) + 'px';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.top = '-60px';
-            heart.style.opacity = Math.random() * 0.7 + 0.5;
-            heart.innerHTML = ['❤️','💖','💗','💘','💝'][Math.floor(Math.random()*5)];
-            
-            document.getElementById('heartRain').appendChild(heart);
-            
-            const duration = Math.random() * 8 + 9;
-            heart.animate([
-                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                { transform: `translateY(\( {window.innerHeight + 150}px) rotate( \){Math.random()*720}deg)`, opacity: 0 }
-            ], { duration: duration * 1000, easing: 'linear' });
-            
-            setTimeout(() => heart.remove(), duration * 1000 + 1000);
-        }
-        
-        setInterval(createHeart, 200);
-        
-        window.onload = () => {
-            for(let i = 0; i < 18; i++) {
-                setTimeout(createHeart, i * 90);
-            }
-        };
+        // لا يوجد عداد، لا توجد قلوب، لا توجد تفاصيل. الصمت هو أبلغ رد.
+        console.log("Connection closed by user.");
     </script>
 </body>
 </html>
